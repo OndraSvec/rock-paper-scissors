@@ -32,6 +32,6 @@ body {
     gap: 1rem;
 }
 
-.rps {
+.rps, #reset {
     padding: 0.25em 1em;
 }
