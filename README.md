@@ -1,1 +1,1 @@
-# rock-paper-scissors
+# this is just a simple rock, paper, scissors game against the computer. Let the best man win!
