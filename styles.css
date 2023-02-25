@@ -72,6 +72,9 @@ button {
 
 button:hover {
     cursor: pointer;
+    scale: 1.2;
+    background-color: rgb(235, 235, 235);
+    color: white;
 }
 
 .buttons {
