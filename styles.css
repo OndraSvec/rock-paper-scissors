@@ -7,48 +7,31 @@
 
 body {
     height: 100vh;
-    background-color: white;
+    background-image: url("./wallpaperflare.com_wallpaper.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    overflow: hidden;
 }
 
 h1 {
-    position: relative;
     text-align: center;
     font-size: calc(24px + 2vmin);
     letter-spacing: 0.125em;
     text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 0.030em black;
-}
-
-h1::before {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: black;
-    overflow: hidden;
-    width: 0%;
-    height: 100%;
-    transition: 200ms;
-}
-
-h1:hover::before {
-    width: 100%;
+    color: white;
 }
 
 .display {
     height: 60vh;
     width: 80vw;
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: transparent;
     color: white;
-    font-size: calc(10px + 2vmin);
-    border: 0.5rem solid white;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    font-size: calc(10px + 3vmin);
+    border: 0.25em solid white;
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,19 +45,39 @@ h1:hover::before {
 }
 
 button {
-    background-color: white;
-    color: black;
-    border: none;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    font-size: calc(10px + 1vmin);
+    position: relative;
+    background-color: transparent;
+    color: transparent;
+    border: 0.25em solid white;
+    border-radius: 0.5em;
+    font-size: calc(12px + 1vmin);
     font-weight: 600;
+    -webkit-text-stroke: 0.08em white;
+    letter-spacing: 0.125em;
 }
 
 button:hover {
     cursor: pointer;
     scale: 1.2;
-    background-color: rgb(235, 235, 235);
+}
+
+button::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 10;
+    left: 40;
     color: white;
+    overflow: hidden;
+    width: 0%;
+    transition: 1s;
+}
+
+button:hover::before {
+    width: 60%;
+}
+
+#scissors:hover::before {
+    width: 70%;
 }
 
 .buttons {
