@@ -40,7 +40,11 @@ function playRound(playerSelection, computerSelection) {
     //display the winner of each round based on each player's choice
     if (playerSelectionCap === computerSelection) {
         return `It's a tie!`;
-    } else if (playerSelectionCap === "Rock" && computerSelection === "Scissors" || playerSelectionCap === "Paper" && computerSelection === "Rock" || playerSelectionCap === "Scissors" && computerSelection === "Paper") {
+    } else if (
+        playerSelectionCap === "Rock" && computerSelection === "Scissors"
+        || playerSelectionCap === "Paper" && computerSelection === "Rock"
+        || playerSelectionCap === "Scissors" && computerSelection === "Paper"
+        ) {
         numOfWinsUser++;
         return `You Win! ${playerSelectionCap} beats ${computerSelection}.`;
     } else {
