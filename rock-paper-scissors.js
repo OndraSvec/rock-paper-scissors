@@ -63,3 +63,17 @@ function gameOver() {
         }
         displayDiv.appendChild(para);
 }
+
+//add event listener to the reset button
+const resetBtn = document.querySelector('#reset');
+resetBtn.addEventListener('click', resetGame);
+
+//reset the game upon reset button click
+function resetGame() {
+    numOfWinsComp = 0;
+    numOfWinsUser = 0;
+    const displayDiv = document.querySelector('.display');
+    while (displayDiv.firstChild) {
+        displayDiv.removeChild(displayDiv.lastChild);
+    }
+}
