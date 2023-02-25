@@ -6,6 +6,8 @@ let numOfWinsComp = 0;
 const buttons = document.querySelectorAll('.rps');
 buttons.forEach(button => button.addEventListener('click', playRound));
 
+const displayDiv = document.querySelector('.display');
+
 //randomly select rock, paper or scissors for the computer
 function getComputerChoice() {
      let gameArr = ["Rock", "Paper", "Scissors"];
@@ -19,7 +21,6 @@ function playRound(e, playerSelection, computerSelection) {
     playerSelection = e.target.value;
     //invoke computer's choice
     computerSelection = getComputerChoice();
-
     //create a paragraph with the info about the current round
     const para = document.createElement('p');
     //stop the game when either player reaches 5 points
@@ -42,18 +43,16 @@ function playRound(e, playerSelection, computerSelection) {
          para.textContent = `You Lose! ${computerSelection} beats ${playerSelection}.`;
     }
     //append the paragraph to the display div
-    const displayDiv = document.querySelector('.display');
     displayDiv.appendChild(para);
 }
 
 //stop the game once a player reaches 5 points
 function gameOver() {
-        const displayDiv = document.querySelector('.display');
+    //create a paragraph with the info about the current round
+    const para = document.createElement('p');
         while (displayDiv.firstChild) {
             displayDiv.removeChild(displayDiv.lastChild);
         }
-        //create a paragraph with the info about the current round
-        const para = document.createElement('p'); 
         if (numOfWinsUser > numOfWinsComp) {
             para.textContent = `You Win ${numOfWinsUser} to ${numOfWinsComp}.`;
         } else {
@@ -70,7 +69,6 @@ resetBtn.addEventListener('click', resetGame);
 function resetGame() {
     numOfWinsComp = 0;
     numOfWinsUser = 0;
-    const displayDiv = document.querySelector('.display');
     while (displayDiv.firstChild) {
         displayDiv.removeChild(displayDiv.lastChild);
     }
