@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Tahoma, sans-serif;
 }
 
 body {
@@ -12,6 +13,32 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: calc(24px + 2vmin);
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 0.030em black;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    overflow: hidden;
+    width: 0%;
+    height: 100%;
+    transition: 200ms;
+}
+
+h1:hover::before {
+    width: 100%;
 }
 
 .display {
