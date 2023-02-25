@@ -28,7 +28,7 @@ function playRound(e, playerSelection, computerSelection) {
         gameOver();
     //store the winner of each round based on each player's choice
     } else if (playerSelection === computerSelection) {
-         para.textContent = `It's a tie!`;
+         para.textContent = `It's a tie! You both chose ${playerSelection}.`;
     } else if (
          playerSelection === "Rock" && computerSelection === "Scissors"
          || playerSelection === "Paper" && computerSelection === "Rock"
