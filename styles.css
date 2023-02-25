@@ -7,8 +7,24 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+}
+
+.display {
+    height: 60vh;
+    width: 80vw;
+    background-color: gainsboro;
+    border: 0.125rem solid black;
+    display: grid;
+    place-items: center;
+    overflow-y: scroll;
+}
+
+.display::-webkit-scrollbar {
+    display: none;
 }
 
 .buttons {
