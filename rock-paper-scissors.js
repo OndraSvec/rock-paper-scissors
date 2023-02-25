@@ -56,10 +56,8 @@ function gameOver() {
         const para = document.createElement('p'); 
         if (numOfWinsUser > numOfWinsComp) {
             para.textContent = `You Win ${numOfWinsUser} to ${numOfWinsComp}.`;
-        } else if (numOfWinsComp > numOfWinsUser) {
-            para.textContent = `You Lose ${numOfWinsComp} to ${numOfWinsUser}.`;
         } else {
-            para.textContent = "It's a draw!";
+            para.textContent = `You Lose ${numOfWinsComp} to ${numOfWinsUser}.`;
         }
         displayDiv.appendChild(para);
 }
