@@ -6,6 +6,7 @@
 
 body {
     height: 100vh;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,15 +17,34 @@ body {
 .display {
     height: 60vh;
     width: 80vw;
-    background-color: gainsboro;
-    border: 0.125rem solid black;
-    display: grid;
-    place-items: center;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    font-size: calc(10px + 2vmin);
+    border: 0.5rem solid white;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
     overflow-y: scroll;
 }
 
 .display::-webkit-scrollbar {
     display: none;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    font-size: calc(10px + 1vmin);
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .buttons {
