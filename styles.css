@@ -14,11 +14,12 @@ body {
     align-items: center;
     gap: 2rem;
     overflow: hidden;
+    padding: 1em;
 }
 
 h1 {
     text-align: center;
-    font-size: calc(24px + 2vmin);
+    font-size: calc(16px + 2.5vmin);
     letter-spacing: 0.125em;
     text-transform: uppercase;
     color: white;
@@ -30,6 +31,7 @@ h1 {
     background-color: transparent;
     color: white;
     font-size: calc(10px + 3vmin);
+    text-align: center;
     border: 0.25em solid white;
     border-radius: 1em;
     display: flex;
@@ -82,6 +84,8 @@ button:hover::before {
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
