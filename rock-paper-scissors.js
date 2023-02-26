@@ -35,11 +35,9 @@ function playRound(e, playerSelection, computerSelection) {
          || playerSelection === "Scissors" && computerSelection === "Paper"
          ) {
          numOfWinsUser++;
-         console.log(numOfWinsUser);
          para.textContent = `You Win! ${playerSelection} beats ${computerSelection}.`;
     } else {
          numOfWinsComp++;
-         console.log(numOfWinsComp);
          para.textContent = `You Lose! ${computerSelection} beats ${playerSelection}.`;
     }
     //append the paragraph to the display div
